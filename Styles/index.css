@@ -1,0 +1,284 @@
+html,
+body {
+    height: 100%;
+    font-size: 24px;
+    font: 1em Arial;
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(../Images/background.jpg);
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+/* kopēja konteinera stili */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header stili */
+.header {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 802px;
+    background: url(../Images/header_image2.png) no-repeat;
+    background-size: 100% 100%;
+    background-attachment:fixed;
+}
+
+/* intro stili */
+.logo {
+    position: relative;
+}
+
+.line {
+    width: 60%;
+    height: 0px;
+    border: 2px solid #EDE8E8;
+}
+
+/* navigacijas pogu stili */
+ul.nav-buttons {
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav-buttons li {
+    display: inline-block;
+    margin: 20px 50px; 
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.nav {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+
+a.nav:hover {
+    color: #842525;
+    background-image:
+     radial-gradient(3px 45% at 0% 50%, rgba(132, 37, 37, 1), transparent),
+     radial-gradient(3px 45% at 100% 50%, rgba(132, 37, 37, 1), transparent); 
+}
+
+ul li {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+/* dinamikas stili navigacijai */
+@media only screen and (max-width: 1200px) {
+    ul.nav-buttons li {
+        margin: 20px 20px;
+    }
+}
+
+@media only screen and (max-width: 901px) {
+    ul.nav-buttons li {
+        margin: 20px 12px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    ul.nav-buttons li {
+        margin: 20px 5px;
+    }
+
+    .navigation {
+        margin-top: 25%;
+    }
+}
+
+/* meina stili */
+.main {
+    flex: 1 1 auto;
+}
+
+.info {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    width: 95%;
+    height: 60%;
+    margin-top: 3%;
+    background-color: rgba(36, 35, 35, 0.804);
+}
+
+.text {
+    width: 80%;
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    margin: 1.5em auto 5em auto;
+}
+
+/* dinamikas stils tekstam */
+@media only screen and (max-width: 900px) {
+    .text {
+        font-size: 15px;
+    }
+}
+
+.pictures {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.pictures img {
+    margin: 0 125px;
+}
+
+/* dinamikas stili atteliem */
+@media only screen and (max-width: 1200px) {
+    .pictures img {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .pictures img {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .pictures img {
+        margin: 0 2px;
+        width: 150px;
+        height: 390px;
+    }
+}
+
+/* pogas stili pārejai uz nākamo lapu. */
+.button {
+    background-color: rgb(36, 35, 35);
+    border: 5px solid #FFFFFF;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-decoration: none;
+    user-select: none;
+    padding: 0.3em 1em;
+    margin: 3% 0 4% 0;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+a.button:hover { 
+    background: rgba(255, 255, 255, 0.286);
+    box-shadow: 0 0 0 1px #aaa, 0 1px 1px #aaa;
+    color: #000;
+}
+
+/* futera stili */
+.footer {
+    display: flex;
+    padding: 10px;
+    text-align: justify;
+    justify-content: space-between;
+    background-color: rgba(36, 35, 35, 0.804);
+    color: #fff;
+}
+
+/* ikonu stili  */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.social a {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github a:hover {
+    background: #191919;
+    color: #fff;
+}
+
+.windows a:hover {
+    background: #125acd;
+    color: #fff;
+}
+
+.twitter a:hover {
+    background: #00acee;
+    color: #fff;
+}
+
+.whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+}
+
+.aboutcomp {
+    width: 60%;
+    font-size: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* teksta stili futerā */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+}
+
+h3.sakums {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 45px;
+}

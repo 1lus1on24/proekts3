@@ -1,0 +1,424 @@
+html,
+body {
+    height: 100%;
+    font-size: 24px;
+    font: 1em Arial;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Sora', sans-serif;
+    background: url(../Images/background.jpg);
+    overflow-x: hidden;
+}
+
+/* kopēja konteinera stili */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header stili */
+.header {
+    display: flex;
+    position: sticky;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    justify-content: space-between;
+    background-color: rgb(16, 20, 25);
+    color: #fff;
+    z-index: 4;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* ievades loga stili */
+.search-box {
+    position: relative;
+    background-color: #D9D9D9;
+    height: 20px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    float: right;
+    width: 40px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #000;
+    font-size: 17px;
+    transition: 0.4s;
+    width: 350px;
+}
+
+@media only screen and (max-width: 620px) {
+    .search-txt {
+        width: 255px;
+        transition: all .7s;
+    }
+}
+
+/* navigaciju un pogu stili */
+.navigation {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+a.button {
+    color: rgb(0, 0, 0);
+    background-color: #D9D9D9;
+    font-weight: 600;
+    text-decoration: none;
+    user-select: none;
+    padding: 0.3em 1em;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+a.button:hover { 
+    background: rgba(255, 255, 255, 0.286);
+    box-shadow: 0 0 0 1px #aaa, 0 1px 1px #aaa;
+}
+
+.navigation_button li {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    font-size: 17px;
+    margin-left: 2px;
+}
+
+/* intro stili */
+.intro_yari {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../Images/intro2.png);
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 82vh;
+}
+
+.intro_text {
+    display: flex;
+    position: relative;
+    font-size: 3em;
+    padding-top: 10%;
+    color: #842525;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.line {
+    width: 60%;
+    height: 0px;
+    border: 2px solid #EDE8E8;
+}
+
+/* meina stili */
+.main {
+    flex: 1 1 auto;
+}
+
+.all {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* visu rindu ar bloķiem stili */
+.rinda1 {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 0 0 1%;
+}
+
+.rinda2 {
+    display: flex;
+    flex-direction: row;
+    margin: 3% 1% 0 0;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    background-color: rgba(36, 35, 35, 0.804);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.information2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    background-color: rgba(36, 35, 35, 0.804);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* attelu stili un animacijas */
+.pictures {
+    margin: 0 1% 0 auto;
+    width: 50%;
+    transition: 1s;
+}
+
+.pictures2 {
+    margin: 0 auto 0 1%;
+    width: 49%;
+    transition: 1s;
+}
+
+/* slajdera stili */
+.slider {
+    width: 80%;
+    height: 462px;
+    overflow: hidden;
+    border: 7px solid #D9D9D9;
+}
+
+/* dinamikas stili slajderam */
+@media only screen and (max-width: 1001px) {
+    .slider {
+        width: 75%;
+        height: 395px;
+        transition: all .7s;
+    }
+}
+
+/* centrēšana */
+.middle {
+    position: relative;
+    margin: 3% auto 2% auto;
+}
+
+/* apakšējo pogu stili */
+.nav {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+/* slaidera pogu stili */
+.bar {
+    height: 8px;
+    width: 30px;
+    margin: 8px;
+    cursor: pointer;
+    background-color: #842525;
+    opacity: 0.8;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+.bar:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* Visu diapozitīvu un tajos iekļauto attēlu stili */
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;   
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+/* teksta stils meina */
+.text {
+    width: 80%;
+    color: #fff;
+    font-size: 23px;
+    text-align: center;
+    margin: 1.5em auto 1.5em auto;
+}
+
+/* dinamikas stils tekstam */
+@media only screen and (max-width: 1001px) {
+    .text {
+        font-size: 18px;
+        transition: all .7s;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .text {
+        font-size: 14px;
+        transition: all .7s;
+    }
+
+    .information h3 {
+        font-size: 1.5em;
+    }
+
+    .information2 h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .text {
+        font-size: 13px;
+        transition: all .7s;
+    }
+
+    .information h3 {
+        font-size: 1.3em;
+    }
+
+    .information2 h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* futera stili */
+.footer {
+    display: flex;
+    padding: 10px;
+    text-align: justify;
+    justify-content: space-between;
+    background-color: rgba(36, 35, 35, 0.804);
+    color: #fff;
+}
+
+/* ikonu stili  */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+.social a {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github a:hover {
+    background: #191919;
+    color: #fff;
+}
+
+.windows a:hover {
+    background: #125acd;
+    color: #fff;
+}
+
+.twitter a:hover {
+    background: #00acee;
+    color: #fff;
+}
+
+.whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+}
+
+.aboutcomp {
+    width: 60%;
+    font-size: 25px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* teksta stili futerā */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+}
+
+h3.sakums {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    padding-bottom: 45px;
+}
