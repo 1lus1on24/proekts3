@@ -6,7 +6,7 @@ body {
     font-family: 'Sora', sans-serif;
     margin: 0;
     padding: 0;
-    background: url(../Images/background.jpg);
+    background: url(/proekts3/Images/background.jpg);
     overflow-x: hidden;
 }
 
@@ -118,7 +118,7 @@ a.button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(../Images/intro1.png);
+    background-image: url(/proekts3/Images/intro1.png);
     background-attachment:fixed;
     background-size: cover;
     background-repeat: no-repeat;
